@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: osus-university-clinic
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: ACCESS_PASSWORD
+        value: "staff password"
